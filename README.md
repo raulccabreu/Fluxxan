@@ -6,7 +6,7 @@ Originally DroidFlux, it started as a direct Android port of the popular [Fluxxo
 The library has evolved into a hybrid of the original Flux and [Redux](https://github.com/reactjs/redux), borrowing some of the great ideas from Redux while trying to be as close to the original dictates of Flux as much as possible. 
 I ended up with something that looks like Flux, but works a lot like Redux.
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Fluxxan-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1786) [![Download](https://api.bintray.com/packages/frostymarvelous/maven/fluxxan/images/download.svg) ](https://bintray.com/frostymarvelous/maven/fluxxan/_latestVersion) 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Fluxxan-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1786) [![Release](https://jitpack.io/v/raulccabreu/Fluxxan.svg)](https://jitpack.io/#raulccabreu/Fluxxan) 
 
 ## Users
 
@@ -15,7 +15,7 @@ Apps using Fluxxan in production
 [![Umaplay](assets/uma_logo.png)](https://play.google.com/store/apps/details?id=com.umaplay.android)
 
 
-### Current Version: 1.0.0
+### Current Version: 1.1.0
 
 Fluxxan follows [Semantic Versioning](http://semver.org/).
 
@@ -29,33 +29,22 @@ If you are looking for a pure java implementation, you can check out [Fluxxan4j]
 ## Installation
 
 #### Gradle
-Fluxxan is available on jcenter.
+Fluxxan is available on jitpack.io.
 
+Add it in your root build.gradle at the end of repositories:
 ```gradle
-compile 'com.umaplay.oss:fluxxan:1.0.0'
-```
-
-#### Manual Installation
-Download the [aar artifact](artifacts/fluxxan-1.0.0.aar) from the [artifacts](artifacts/) directory
-and copy it into the libs directory of your app module.
-
-Specify `libs` as a repository in your root gradle file.
-```groovy
-    allprojects {
-        repositories {
-            ...
-            flatDir { dirs 'libs' }
-        }
-    }
-``` 
-   
-Specify Fluxxan as dependency in your app's gradle file.
-```groovy
-    dependencies {
-        compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile(name: 'fluxxan-1.0.0', ext: 'aar')
+allprojects {
+    repositories {
         ...
+        maven { url 'https://jitpack.io' }
     }
+}
+```
+Add the dependency
+```gradle
+dependencies {
+    compile 'com.github.raulccabreu:fluxxan:1.1.0'
+}
 ```
 
 ## Introduction
